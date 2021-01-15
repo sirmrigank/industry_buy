@@ -24,7 +24,7 @@ SECRET_KEY = 'y^o@11l6f)0%ah=#2+vp#ihmlqq+z#wat*r)71+a#xsfn!%!o-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
 # Application definition
 
@@ -36,8 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'credit_api',
-    'rest_framework_simplejwt',
+    'credit_api'
 ]
 
 MIDDLEWARE = [
@@ -116,15 +115,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
-    ],
-    "DEFAULT_PARSER_CLASSES": [
-        "rest_framework.parsers.JSONParser",
-    ],
-    "DEFAULT_AUTHENTICATION_CLASSES": [                               # new
-        "rest_framework.authentication.SessionAuthentication",        # new
-        "rest_framework_simplejwt.authentication.JWTAuthentication",  # new
-    ],
-}
+# REST_FRAMEWORK = {
+#     'DEFAULT_PERMISSION_CLASSES': [
+#         'rest_framework.permissions.IsAuthenticated',
+#     ],
+#     "DEFAULT_PARSER_CLASSES": [
+#         "rest_framework.parsers.JSONParser",
+#     ],
+#     "DEFAULT_AUTHENTICATION_CLASSES": [                               # new
+#         "rest_framework.authentication.SessionAuthentication",        # new
+#         "rest_framework_simplejwt.authentication.JWTAuthentication",  # new
+#     ],
+# }
